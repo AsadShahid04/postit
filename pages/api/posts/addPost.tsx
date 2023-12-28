@@ -22,11 +22,13 @@ export default async function handler(
         })
 
         //Check title 
-        if (title.length > 300) 
+        if (title.length > 300) {
             return res.status(403).json({message: "Womp Womp, please write a shorter post."})
-        if (title.length < 1) 
+        }
+        if (!title.length) {
             return res.status(403).json({message: "Womp Womp, please write a longer post."})
-    
+        } 
+
         //Create Post
         try {
         const result = await prisma.post.create({
