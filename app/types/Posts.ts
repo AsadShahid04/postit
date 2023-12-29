@@ -1,7 +1,7 @@
-export type PostsType = {
+export type PostType = {
   title: string
   id: string
-  createdAt?: string
+  createdAt: string
   Comment?: {
     createdAt: string
     id: string

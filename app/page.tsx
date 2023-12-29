@@ -29,7 +29,7 @@ export default function Home() {
           key={post.id}
           id={post.id}
           name={post.user.name}
-          avatar={post.user.image}
+          // avatar={post.user.image} TODO: Add avatar
           postTitle={post.title}
           comments={post.Comment}
         />

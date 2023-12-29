@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { signOut } from "next-auth/react"
-import Link from "next/link"
+import Image from "next/image";
+import { signOut } from "next-auth/react";
+import Link from "next/link";
 
 type User = {
-  image: string
-}
+  image: string;
+};
 
 export default function Logged({ image }: User) {
   return (
@@ -28,5 +28,5 @@ export default function Logged({ image }: User) {
         />
       </Link>
     </li>
-  )
+  );
 }

@@ -67,7 +67,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   Post          Post[]
-  comments      Comment[]
+  Comment       Comment[]
 }
 
 model VerificationToken {
