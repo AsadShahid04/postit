@@ -22,10 +22,14 @@ export default function MyPosts() {
     <div>
       Data Below
       {data?.Post?.map((post) => (
-        <>
-          {console.log(data)}
-          <h1>{post.title}</h1>
-        </>
+        <EditPost
+          id={post.id}
+          key={post.id}
+          avatar={data.image}
+          name={data.name}
+          title={post.title}
+          comments={post.Comment}
+        />
       ))}
     </div>
   );
