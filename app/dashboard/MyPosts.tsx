@@ -17,10 +17,16 @@ export default function MyPosts() {
   });
 
   if (isLoading) return <h1>Posts are loading...</h1>;
+
+  // Check if there are no posts available
+  if (!data?.Post || data.Post.length === 0) {
+    return <h1>No posts to display.</h1>;
+  }
+
   //console.log(data);
   return (
     <div>
-      Data Below
+      {/* Data Below */}
       {data?.Post?.map((post) => (
         <EditPost
           id={post.id}

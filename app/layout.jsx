@@ -2,13 +2,13 @@ import "./globals.css";
 import Nav from "./auth/Nav";
 import QueryWrapper from "./auth/QueryWrapper.tsx";
 import { Query } from "@tanstack/react-query";
-// import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
-// const roboto = Roboto({
-//   subsets: ["latin"],
-//   weight: ["400", "700"],
-//   variable: "--font-roboto",
-// });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-roboto",
+});
 
 export default function RootLayout({ children }) {
   return (

@@ -4,7 +4,7 @@ import Post from "./components/Post";
 import AddPost from "./components/AddPost";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { PostsType } from "./types/Posts";
+import { PostType } from "./types/Posts";
 
 //Fetch All posts
 const allPosts = async () => {
@@ -13,7 +13,7 @@ const allPosts = async () => {
 };
 
 export default function Home() {
-  const { data, error, isLoading } = useQuery<PostsType[]>({
+  const { data, error, isLoading } = useQuery<PostType[]>({
     queryFn: allPosts,
     queryKey: ["posts"],
   });
@@ -29,7 +29,7 @@ export default function Home() {
           key={post.id}
           id={post.id}
           name={post.user.name}
-          // avatar={post.user.image} TODO: Add avatar
+          //avatar={post.user.image} //TODO: Add avatar
           postTitle={post.title}
           comments={post.Comment}
         />

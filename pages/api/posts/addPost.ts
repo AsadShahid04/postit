@@ -23,10 +23,10 @@ export default async function handler(
 
         //Check title 
         if (title.length > 300) {
-            return res.status(403).json({message: "Womp Womp, please write a shorter post."})
+            return res.status(403).json({message: "Woah, please write a shorter post."})
         }
         if (!title.length) {
-            return res.status(403).json({message: "Womp Womp, please write a longer post."})
+            return res.status(403).json({message: "Hmm, please write a longer post."})
         } 
 
         //Create Post
